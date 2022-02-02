@@ -7,7 +7,6 @@ CREATE SEQUENCE customers_id_seq;
 CREATE OR REPLACE TRIGGER cust_tgr
     BEFORE INSERT
     ON customers
-    REFERENCING NEW AS NEW OLD AS OLD
     FOR EACH ROW
 BEGIN
     IF :NEW.customer_id IS NULL THEN
@@ -24,7 +23,6 @@ CREATE SEQUENCE admin_id_seq;
 CREATE OR REPLACE TRIGGER adm_tgr
     BEFORE INSERT
     ON admins
-    REFERENCING NEW AS NEW OLD AS OLD
     FOR EACH ROW
 BEGIN
     IF :NEW.admin_id IS NULL THEN
@@ -33,13 +31,12 @@ BEGIN
 END;
 
 ----- CREATING CATEGORY TABLE
-create table categories(category_id varchar2(20) constraint pk_category_id primary key, category_name varchar2(50))
+create table categories(category_id varchar2(20) constraint pk_category_id primary key, category_name varchar2(50));
 CREATE SEQUENCE category_id_seq;
 
 CREATE OR REPLACE TRIGGER cat_tgr
     BEFORE INSERT
     ON categories
-    REFERENCING NEW AS NEW OLD AS OLD
     FOR EACH ROW
 BEGIN
     IF :NEW.category_id IS NULL THEN
@@ -57,7 +54,6 @@ CREATE SEQUENCE product_id_seq;
 CREATE OR REPLACE TRIGGER prod_tgr
     BEFORE INSERT
     ON products
-    REFERENCING NEW AS NEW OLD AS OLD
     FOR EACH ROW
 BEGIN
     IF :NEW.product_id IS NULL THEN
@@ -75,7 +71,6 @@ CREATE SEQUENCE coupon_id_seq;
 CREATE OR REPLACE TRIGGER coup_tgr
     BEFORE INSERT
     ON coupons
-    REFERENCING NEW AS NEW OLD AS OLD
     FOR EACH ROW
 BEGIN
     IF :NEW.coupon_id IS NULL THEN
@@ -93,7 +88,6 @@ CREATE SEQUENCE cart_id_seq;
 CREATE OR REPLACE TRIGGER cart_tgr
     BEFORE INSERT
     ON carts
-    REFERENCING NEW AS NEW OLD AS OLD
     FOR EACH ROW
 BEGIN
     IF :NEW.cart_id IS NULL THEN
@@ -112,7 +106,6 @@ CREATE SEQUENCE cart_items_id_seq;
 CREATE OR REPLACE TRIGGER cart_items_tgr
     BEFORE INSERT
     ON cart_items
-    REFERENCING NEW AS NEW OLD AS OLD
     FOR EACH ROW
 BEGIN
     IF :NEW.cart_item_id IS NULL THEN
