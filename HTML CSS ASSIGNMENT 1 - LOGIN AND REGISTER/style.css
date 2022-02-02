@@ -1,0 +1,130 @@
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(198,198,214);
+    background: radial-gradient(circle, rgba(198,198,214,1) 0%, rgba(85,239,255,0.25253851540616246) 100%, rgba(4,0,70,1) 100%);
+}
+
+/* Full-width input fields */
+.cards input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.cards input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+.loginbtn {
+    background-color: #1a68f8;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+  
+  .loginbtn:hover {
+    opacity:1;
+  }
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.cards{
+    background-color: whitesmoke;
+    width: 40%;
+    padding: 15px;
+    margin: 50px 0 22px 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  color: rgb(133, 125, 125);
+  text-align: center;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fill .01s ease forwards 1.5s;
+  }
+
+
+.logo path{
+  stroke-dasharray: 790;
+  stroke-dashoffset: 790;
+  animation: line-anim 2s ease forwards;
+}
+
+@keyframes line-anim{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: #0066a1;
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .4));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .4));
+  }
+}
