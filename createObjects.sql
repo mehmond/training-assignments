@@ -10,7 +10,7 @@ CREATE OR REPLACE TRIGGER cust_tgr
     FOR EACH ROW
 BEGIN
     IF :NEW.customer_id IS NULL THEN
-        SELECT 'C'||TO_CHAR(customers_id_seq.NEXTVAL,'0000000') INTO :NEW.customer_id FROM DUAL;
+        SELECT 'C'||TRIM(TO_CHAR(customers_id_seq.NEXTVAL,'0000000')) INTO :NEW.customer_id FROM DUAL;
     END IF;
 END;
 
