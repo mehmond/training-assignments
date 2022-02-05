@@ -2,8 +2,27 @@
 
 insert into admins(email, password)  values('raymond@gmail.com', '1234567');
 
+--- INSERT INTO CUSTOMERS
+Select * from customers;
+
+
+INSERT INTO customers (
+    customer_name,
+    email,
+    password,
+    phone_number,
+    address
+) VALUES (
+    'Raymond Sandoval',
+    'raymond.sandoval@gmail.com',
+    'Atos123$',
+    '09123589',
+    'Sta. Rosa'
+);
+
+
+
 ----- INSERT INTO Category
-select * from categories;
 
 INSERT INTO categories (category_name) VALUES ('Electronics');
 
