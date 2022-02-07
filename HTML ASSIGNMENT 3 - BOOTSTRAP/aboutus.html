@@ -155,9 +155,7 @@
                   Our World
                 </a>
                 <ul class="dropdown-menu px-3" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="aboutus.html">About Us</a>
-                  </li>
+                  <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li><a class="dropdown-item" href="#">Our Mission</a></li>
                   <li><hr class="dropdown-divider" /></li>
@@ -237,111 +235,22 @@
     <main>
       <section>
         <div class="container-fluid">
-          <div class="row align-items-center justify-content-center mt-5">
-            <div class="col-7 px-md-5 image_section">
+          <div class="row align-items-center justify-content-center mt-5" style="height: 100vh;">
+            <div class="col-7 px-md-5 about_text">
+              <p class="fs-1 text-center mb-5">ABOUT US</p>
+              <p class="fs-3 text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda veniam animi officia qui quas iste delectus at
+                consequatur aspernatur quae, doloribus architecto officiis
+                corporis reprehenderit veritatis dolore. Numquam, ratione enim.
+              </p>
+            </div>
+            <div class="col px-sm-3 me-3 ms-3">
               <img
                 src="assets/images/bg.png"
                 alt=""
-                class="img-fluid mx-auto d-block register_image"
+                class="img-fluid mx-auto d-block about_image"
               />
-            </div>
-            <div class="col px-sm-3 me-3 ms-3">
-              <div class="card p-5">
-                <h1 style="text-align: center">Register</h1>
-                <div class="card-body">
-                  <form name="registerForm" onsubmit="return validateUser()">
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"
-                        >Email address</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        aria-describedby="emailHelp"
-                        placeholder="Please type email here..."
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label"
-                        >Password</label
-                      >
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="password"
-                        name="password"
-                        placeholder="Please type password here..."
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label"
-                        >Repeat Password</label
-                      >
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="repeatPassword"
-                        name="repeatPassword"
-                        placeholder="Please repeat password..."
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label"
-                        >Full name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fullName"
-                        name="fullName"
-                        placeholder="Please give full name..."
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label"
-                        >Address</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="address"
-                        name="address"
-                        placeholder="Please give full address..."
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label"
-                        >Phone number</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="phoneNumber"
-                        name="phoneNumber"
-                        placeholder="Phone number... (ex. 09124442345)"
-                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\.*)\./g, '$1');"
-                        required
-                      />
-                    </div>
-                    <div class="d-grid gap-2">
-                      <button type="submit" class="btn btn-primary btn-lg mt-3">
-                        Submit
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="col text-center">
-                  Already have an account? Click &nbsp;
-                  <a href="login.html">here</a> &nbsp; to login.
-                </div>
-              </div>
             </div>
           </div>
         </div>
