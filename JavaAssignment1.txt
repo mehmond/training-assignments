@@ -32,8 +32,9 @@ System.out.println("Largest number in the array is : " + assignmentObj.findLarge
 2.) create methods to find the cube and square of a given number
 
 	public void findCubeAndSquare(double number) {
-		System.out.println("The square root of " + number + " is " + Math.sqrt(number) + " and it's cube root is " + Math.cbrt(number));
+		System.out.println("The square of " + number + " is " + Math.pow(number, 2) + " and it's cub  is " + Math.pow(number, 3));
 	}
+	
 
 
 	System.out.println("Enter a number you want to take the cube and square root : ");
