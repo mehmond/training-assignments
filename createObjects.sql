@@ -1,5 +1,5 @@
 -- CREATING CUSTOMERS TABLE 
-create table customers(customer_id varchar2(20) constraint pk_customer_id primary key , customer_name varchar2(50), email varchar(50) unique, password varchar2(50) not null, phone_number varchar2(20), address varchar2(50), date_of_registration date default sysdate                         
+create table customers(customer_id varchar2(20) constraint pk_customer_id primary key , customer_name varchar2(50), customer_email varchar(50) unique, password varchar2(50) not null, phone_number varchar2(20), address varchar2(50), date_of_registration date default sysdate                         
 );
 
 CREATE SEQUENCE customers_id_seq;
@@ -16,7 +16,7 @@ END;
 
 ----- CREATING ADMIN TABLE
 
-create table admins(admin_id varchar2(20) constraint pk_admin_id primary key, email varchar2(50) unique , password varchar2(50) not null          
+create table admins(admin_id varchar2(20) constraint pk_admin_id primary key, admin_email varchar2(50) unique , password varchar2(50) not null          
 );
 CREATE SEQUENCE admin_id_seq;
 
@@ -43,6 +43,7 @@ BEGIN
         SELECT 'CAT'||TO_CHAR(category_id_seq.NEXTVAL,'0000000') INTO :NEW.category_id FROM DUAL;
     END IF;
 END;
+
 ----- CREATING PRODUCTS TABLE
 
 create table products(product_id varchar2(20) constraint pk_product_id primary key , product_name varchar2(50), category_id varchar(20) not null , product_price number(12,2), product_image varchar2(20), product_available_qty varchar2(50),
